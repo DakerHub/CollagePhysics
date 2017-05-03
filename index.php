@@ -17,15 +17,19 @@
         </div>
         <nav class="wp-nav">
             <ul class="nav">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Curriculum resources</a></li>
-                <li><a href="#">Announcement</a></li>
-                <li><a href="#">Physics news</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="wp-content/themes/collagePhysics/homePage.php" class="nav-tag active">Home</a></li>
+                <li><a href="wp-content/themes/collagePhysics/resources.php" class="nav-tag">Curriculum resources</a></li>
+                <li><a href="wp-content/themes/collagePhysics/announcement.php" class="nav-tag">Announcement</a></li>
+                <li><a href="wp-content/themes/collagePhysics/news.php" class="nav-tag">Physics news</a></li>
+                <li><a href="wp-content/themes/collagePhysics/about.php" class="nav-tag">About</a></li>
             </ul>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="wp-container">
+        <iframe class="container" src="wp-content/themes/collagePhysics/homePage.php" frameborder="0"></iframe>
+    </main>
+    <footer class="wp-footer"></footer>
+    <script src="wp-includes/js/jquery/jquery.js"></script>
+    <script src="wp-content/themes/collagePhysics/js/index.js"></script>
 </body>
 </html>
