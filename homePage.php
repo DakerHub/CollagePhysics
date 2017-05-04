@@ -1,3 +1,6 @@
+<?php
+include("../../../wp-load.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,21 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <?php
+        $pages = get_posts();
+        foreach($pages as $page):?>
+            <?php if(!empty($page-> ID)): ?>
+                <img src="<?php echo get_post_meta($page-> ID,"cover",true) ?>" alt="">
+            <?php endif ?>
+            <p><?php echo $page-> post_title ?></p>
+        
+    <?php endforeach ?>
+    <script src="../../../wp-includes/js/jquery/jquery.js"></script>
+    <script>
+        // jQuery(function($){
+        //     console.log();
+        //     $(".container",window.parent.document).height($(document).height());
+        // });
+    </script>
 </body>
 </html>

@@ -26,7 +26,7 @@
         </nav>
     </header>
     <main class="wp-container">
-        <iframe class="container" src="wp-content/themes/collagePhysics/homePage.php" frameborder="0"></iframe>
+        <iframe id="iframepage" class="container" src="wp-content/themes/collagePhysics/homePage.php" frameborder="0" onLoad="iFrameHeight()"></iframe>
     </main>
     <footer class="wp-footer"></footer>
     <script src="wp-includes/js/jquery/jquery.js"></script>
