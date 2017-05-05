@@ -30,6 +30,7 @@
     </main>
     <footer class="wp-footer"></footer>
     <script src="wp-includes/js/jquery/jquery.js"></script>
+    
     <script src="wp-content/themes/collagePhysics/js/index.js"></script>
 </body>
 </html>

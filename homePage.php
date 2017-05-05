@@ -17,14 +17,20 @@ include("../../../wp-load.php");
                 <img src="<?php echo get_post_meta($page-> ID,"cover",true) ?>" alt="">
             <?php endif ?>
             <p><?php echo $page-> post_title ?></p>
-        
     <?php endforeach ?>
+
+   <div id="slideShow">
+        <ul>
+            <li><img src="images/2.jpg" width="480" height="300"></li>
+            <li><img src="images/3.jpg"  width="480" height="300"></li>
+            <li><img src="images/4.jpg"  width="480" height="300"></li>
+        </ul>
+        <a href="#" class="prev"><div class="slider-prev" style="color=#fff">&lt;</div></a> 
+        <a href="#" class="next"><div class="slider-next" style="color=#fff">&gt;</div></a>
+    </div>
     <script src="../../../wp-includes/js/jquery/jquery.js"></script>
+    <script src="js/slider.js"></script>
     <script>
-        // jQuery(function($){
-        //     console.log();
-        //     $(".container",window.parent.document).height($(document).height());
-        // });
     </script>
 </body>
 </html>
