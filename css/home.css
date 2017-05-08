@@ -1,0 +1,61 @@
+body{
+    overflow: hidden;
+}
+
+.wp-resource,.wp-announcement{
+    position: relative;
+    width: 800px;
+    height: 130px;
+    margin: 10px auto;
+    text-align: center;
+}
+.resource-title,.announcement-title{
+    position: absolute;
+    border: thin solid #0c7ed9;
+    border-bottom-width: 0;
+    height: 30px;
+    padding: 0 5px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #0c7ed9;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index: 1;
+     
+}
+.resources,.announcements{
+    position: absolute;
+    top: 30px;
+    height: 100px;
+    width: 100%;
+    border: thin solid #0c7ed9;
+    border-radius: 5px;
+}
+.resources a,.announcements a {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 30px;
+    text-decoration: underline;
+    text-align: left;
+    color: #333;
+    font-size: 14px;
+    float: left;
+    overflow:hidden;
+    white-space:nowrap; 
+    text-overflow:ellipsis; 
+    -o-text-overflow:ellipsis;
+}
+.announcement-more,.resource-more{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: #333;
+    cursor: pointer;
+}
+a:hover{
+    color: #0c7ed9;
+}

@@ -14,7 +14,7 @@ sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 button,input,select,textarea{font-size:100%}
 table{border-collapse:collapse;border-spacing:0}
-body{min-width:1024px}
+body{min-width:1024px;}
 
 /*header开始*/
 .wp-header{
@@ -46,10 +46,11 @@ body{min-width:1024px}
     border-bottom: thin solid #d8d8d8;
 }
 .nav{
-    margin-left: 10%;
     width: 80%;
+    margin: auto;
     font-size: 16px;
     text-align: center;
+    max-width: 1240px;
 }
 .nav li{
     display: inline-block;
@@ -86,7 +87,9 @@ body{min-width:1024px}
 /*container开始*/
 .wp-container{
     width: 80%;
-    margin-left: 10%;
+    margin: auto;
+    max-width: 1240px;
+    min-height: 600px;
 }
 .container{
     width: 100%;

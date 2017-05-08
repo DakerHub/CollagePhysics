@@ -1,0 +1,59 @@
+/*个性设置*/
+#slideShow .imgList{
+width: 100%;
+}
+#slideShow .imgList img{
+width: 100%;
+}
+
+/*通用设置*/
+#slideShow{
+    overflow: hidden;
+    position: relative;
+}
+#slideShow ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+#slideShow li{
+    list-style: none;
+    float: left;
+    position: relative;
+}
+#slideShow a{
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+}
+#slideShow  .slidebtn{
+    opacity: 0;
+    transition: opacity .5s;
+}
+#slideShow:hover  .slidebtn{
+    opacity: 1;
+}
+#slideShow .slider-tilte{
+    left: 40px;
+    top: 30px;
+    font-size: 28px;
+}
+#slideShow .slider-tilte:hover{
+    text-decoration: underline;
+}
+#slideShow .slider-prev{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+}
+#slideShow .slider-next{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+}

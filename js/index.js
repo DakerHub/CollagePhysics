@@ -9,7 +9,7 @@ jQuery(function($){
             _this = this;
         this.init = function(){
             this.bindEvent();
-            this.setFooterPosition();
+            // this.setFooterPosition();
         };
         /**
          * 设置footer的位置，保证页面撑满窗口

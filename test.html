@@ -20,58 +20,70 @@
         #slideShow li{
             list-style: none;
             float: left;
+            position: relative;
         }
         #slideShow a{
             position: absolute;
             text-decoration: none;
             color: #000;
         }
-        #slideShow li a{
-            left: 10px;
-            bottom: 5px;
-        }
         #slideShow  .slidebtn{
-            border-radius: 50%;
-            background-color: rgba(0,0,0,.8);
-            text-align: center;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+        #slideShow:hover  .slidebtn{
+            opacity: 1;
+        }
+        .slider-tilte{
+            left: 40px;
+            top: 30px;
+            font-size: 28px;
         }
         .slider-prev{
-            width: 0;
-            height: 0;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-left: 10px solid transparent;
-            border-right: 10px solid #fff;
-            margin-top: calc(50% - 8px);
-            margin-left: calc(50% - 18px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 64px;
+            height: 64px;
         }
         .slider-next{
-            width: 0;
-            height: 0;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-right: 10px solid transparent;
-            border-left: 10px solid #fff;
-            margin-top: calc(50% - 8px);
-            margin-left: calc(50% - 5px);
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 64px;
+            height: 64px;
         }
     </style>
 </head>
 <body>
     <div id="slideShow">
         <ul class="imgList">
-            <li><img src="images/2.jpg"><a href="#">title</a></li>
-            <li><img src="images/3.jpg"><a href="#">title</a></li>
-            <li><img src="images/4.jpg"><a href="#">title</a></li>
+            <li><img src="images/2.jpg"><a href="#" class="slider-tilte">title</a></li>
+            <li><img src="images/3.jpg"><a href="#" class="slider-tilte">title</a></li>
+            <li><img src="images/4.jpg"><a href="#" class="slider-tilte">title</a></li>
         </ul>
-        <a href="#" class="slidebtn slidePrev"><div class="slider-prev"></div></a> 
-        <a href="#" class="slidebtn slideNext"><div class="slider-next"></div></a>
+        <img src="images/toleft.png" alt="" class="slidebtn slider-prev">
+        <img src="images/toright.png" alt="" class="slidebtn slider-next">
     </div>
     <script src="../../../wp-includes/js/jquery/jquery.js"></script>
     <script src="js/slider.js"></script>
     <script>
-        jQuery(function(){
+        jQuery(function($){
             slider.init();
+            var interval = 0;
+            interval = setInterval(function(){
+                $(".slider-next").click();
+            },2000);
+            $("#slideShow").hover(function () {
+                    // over
+                    clearInterval(interval);
+                }, function () {
+                    // out
+                    interval = setInterval(function(){
+                        $(".slider-next").click();
+                    },2000);
+                }
+            );
         })
     </script>
 </body>
