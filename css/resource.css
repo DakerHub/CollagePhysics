@@ -1,0 +1,95 @@
+body{
+    overflow: hidden;
+}
+.container{
+    width: 800px;
+    margin: auto;
+}
+/*sidebar开始*/
+
+.wp-side-bar{
+    float: left;
+    width: 140px;
+}
+.side-bar{
+    height: 260px;
+    background-color: #0c7ed9;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.side-bar::-webkit-scrollbar  
+{  
+    width: 12px;  
+    height: 16px;  
+}
+/*定义滚动条轨道 内阴影+圆角*/  
+.side-bar::-webkit-scrollbar-track  
+{  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+.side-bar::-webkit-scrollbar-thumb  
+{  
+    width: 12px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: #114f80;
+}  
+.side-bar ul{
+    padding: 0;
+    margin: 20px;
+}
+.side-bar li{
+    width: 100px;
+    list-style: none;
+    margin: 5px 0;
+}
+.side-bar a {
+    display: block;
+    width: 100px;
+    text-overflow : ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    color: #92d0fd;
+    text-decoration: none;
+}
+.side-bar a:hover,.side-bar .active a{
+    color: #fff;
+}
+/*sidebar结束*/
+
+/*content开始*/
+.wp-content{
+    float: left;
+    width: 640px;
+    margin: 0 9px;
+
+}
+.content{
+    height: 300px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.content-post{
+    padding: 20px 20px;
+    width: 600px;
+}
+.post-title{
+    padding: 20px 0;
+    margin: 0;
+    color: #222;
+}
+.post-title:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 600px;
+    background-color: #51535a;
+    margin: 5px 0;
+}
+.post-content{
+    color: #51535a;
+    margin: 10px 0;
+}
+/*content结束*/
